@@ -38,6 +38,8 @@ function Inspector() {
     });
   };
   doInit();
+
+  console.log('AFRAME-INSPECTOR MODDED FOR OVER: build', 2);
 }
 
 Inspector.prototype = {
@@ -295,6 +297,20 @@ Inspector.prototype = {
     document.body.classList.remove('aframe-inspector-opened');
     this.sceneEl.resize();
     Shortcuts.disable();
+  },
+
+  /**
+   * Emit event
+   */
+  emitEvent: function (name, detail) {
+    Events.emit(name, detail);
+  },
+
+  /**
+   * Listen to event
+   */
+  listenEvent: function (name, callback) {
+    Events.on(name, callback);
   }
 };
 

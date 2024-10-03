@@ -112,6 +112,11 @@ THREE.EditorControls = function (_object, domElement) {
 
     if (delta.length() > distance) return;
 
+    // do nothing if distance is >= 100 and zoom is out
+    if (distance >= 100 && delta.z > 0) {
+      return;
+    }
+
     delta.applyMatrix3(normalMatrix.getNormalMatrix(object.matrix));
 
     if (this.isOrthographic) {
