@@ -9,10 +9,12 @@ import { getOS } from './utils';
 const os = getOS();
 
 function shouldCaptureKeyEvent(event) {
-  return (
-    event.target.closest('#cameraToolbar') ||
-    (event.target.tagName !== 'INPUT' && event.target.tagName !== 'TEXTAREA')
-  );
+  return false; // FORCE DISABLED ALL SHORTCUTS
+
+  // return (
+  //   event.target.closest('#cameraToolbar') ||
+  //   (event.target.tagName !== 'INPUT' && event.target.tagName !== 'TEXTAREA')
+  // );
 }
 
 export const Shortcuts = {

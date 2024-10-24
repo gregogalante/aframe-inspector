@@ -39,7 +39,7 @@ function Inspector() {
   };
   doInit();
 
-  console.log('AFRAME-INSPECTOR MODDED FOR OVER: build', 2);
+  console.log('AFRAME-INSPECTOR MODDED FOR OVER: build', 3);
 }
 
 Inspector.prototype = {
